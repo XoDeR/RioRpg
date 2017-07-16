@@ -73,7 +73,6 @@ namespace RioGame
 
 		unique_ptr<Player> player;
 		unique_ptr<Gui> gui;
-
 		unique_ptr<World> world;
 	public:
 		Game();
@@ -81,7 +80,7 @@ namespace RioGame
 		// Starts the game
 		void run();
 		void update(float);
-		void set_state(GameState);
+		void setState(GameState);
 		// Creates a new game with the given dimensions
 		void createNewGame(uint32_t width, uint32_t height);
 		// Creates an empty level with the given dimensions
@@ -91,9 +90,10 @@ namespace RioGame
 		// Restores the unlocks to their initial state
 		void resetUnlocks();
 		void setCastleId(uint32_t);
-		uint32_t getThroneId() const;
+		uint32_t getCastleId() const;
 
 		World* getWorld();
+		Player* getPlayer();
 		Gui* getGui();
 		// Ends the game and shows the "YOU WON" message
 		void win();
