@@ -18,8 +18,6 @@ namespace RioGame
 		float timeSinceLastUpdate{ 0.0f };
 		Game* game{nullptr};
 	public:
-		TopBar();
-		~TopBar() = default;
 		// Updates the current time on the top bar if a second passed since the last time update
 		void updateTime(float timeSinceLastFrame);
 		// Sets the given label's text to the given string
